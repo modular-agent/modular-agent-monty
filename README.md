@@ -1,6 +1,6 @@
 # Monty Agents for Modular Agent
 
-Execute Python-like scripts in Modular Agent workflows using [pydantic/monty](https://github.com/pydantic/monty), a Rust-native Python interpreter.
+Execute Python-like scripts in Modular Agent using [pydantic/monty](https://github.com/pydantic/monty), a Rust-native Python interpreter.
 
 ## Features
 
