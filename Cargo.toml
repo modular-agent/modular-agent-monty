@@ -1,0 +1,19 @@
+[package]
+name = "modular-agent-monty"
+version = "0.1.0"
+description = "Monty Agents for Modular Agent"
+authors = ["Akira Ishino <akira@lumilab.jp>"]
+edition = "2024"
+license = "Apache-2.0 OR MIT"
+
+[dependencies]
+im = "15.1.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt"] }
+
+modular-agent-core = "0.23.1"
+monty = { git = "https://github.com/pydantic/monty" }
+
+# [patch.crates-io]
+# modular-agent-core = { path = "../modular-agent-core/modular-agent-core" }
