@@ -15,5 +15,5 @@ tokio = { version = "1", features = ["rt"] }
 modular-agent-core = "0.23.1"
 monty = { git = "https://github.com/pydantic/monty" }
 
-# [patch.crates-io]
-# modular-agent-core = { path = "../modular-agent-core/modular-agent-core" }
+[patch.crates-io]
+modular-agent-core = { path = "../modular-agent-core/modular-agent-core" }
