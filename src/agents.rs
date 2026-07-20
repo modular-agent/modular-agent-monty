@@ -4,7 +4,7 @@ use modular_agent_core::{
     Agent, AgentContext, AgentData, AgentError, AgentOutput, AgentSpec, AgentValue, AsAgent,
     ModularAgent, async_trait, modular_agent,
 };
-use monty::{DictPairs, MontyObject, MontyRun, NoLimitTracker, PrintWriter};
+use monty::{CompileOptions, DictPairs, MontyObject, MontyRun, NoLimitTracker, PrintWriter};
 
 static CATEGORY: &str = "Script/Monty";
 
@@ -78,7 +78,7 @@ impl AsAgent for MontyScriptAgent {
 }
 
 fn run_monty_script(script: String, input: MontyObject) -> Result<AgentValue, AgentError> {
-    let runner = MontyRun::new(script, "script.py", vec!["value".to_owned()])
+    let runner = MontyRun::new(script, "script.py", vec!["value".to_owned()], CompileOptions::default())
         .map_err(|e| AgentError::InvalidValue(format!("Monty compile error: {e}")))?;
     let result = runner
         .run(vec![input], NoLimitTracker, PrintWriter::Stdout)
