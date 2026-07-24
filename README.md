@@ -89,7 +89,7 @@ If input is `5`, output is `5`. If input is `-3`, no output is emitted.
 | Array | list | Elements converted recursively |
 | Object | dict | String keys, values converted recursively |
 | Tensor | list | f32 values widened to float (f64) |
-| Message | str | JSON-serialized |
+| Message | dict | Fields via `value["role"]`, `value["content"]`; block content becomes a list of dicts |
 | Error | str | Formatted error string |
 | Image | None | Image data is not accessible from scripts |
 
