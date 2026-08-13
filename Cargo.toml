@@ -12,7 +12,7 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tokio = { version = "1", features = ["rt"] }
 
-modular-agent-core = "0.27.0"
+modular-agent-core = { path = "../../crates/modular-agent-core" }
 monty = { git = "https://github.com/pydantic/monty", tag = "v0.0.19-beta.6" }
 # Object/runtime types moved out of `monty` into `monty-types` in 0.0.19-beta.5.
 monty-types = { git = "https://github.com/pydantic/monty", tag = "v0.0.19-beta.6" }
