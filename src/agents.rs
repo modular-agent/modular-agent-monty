@@ -65,7 +65,7 @@ impl AsAgent for MontyScriptAgent {
 
         let input = agent_value_to_monty_object(&value);
         let result = self
-            .runtime()
+            .runtime()?
             .spawn_blocking(move || run_monty_script(script, input))
             .await
             .map_err(|e| AgentError::IoError(format!("Monty task error: {e}")))??;
